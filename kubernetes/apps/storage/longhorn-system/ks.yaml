@@ -10,7 +10,7 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  path: ./kubernetes/apps/storage/longhorn-system/longhorn/app
+  path: ./kubernetes/apps/storage/longhorn-system/app
   prune: true
   sourceRef:
     kind: GitRepository
@@ -33,7 +33,7 @@ spec:
       app.kubernetes.io/name: *app
   dependsOn:
     - name: longhorn
-  path: ./kubernetes/apps/storage/longhorn-system/longhorn/storageclass
+  path: ./kubernetes/apps/storage/longhorn-system/app/storageclass
   prune: true
   sourceRef:
     kind: GitRepository
