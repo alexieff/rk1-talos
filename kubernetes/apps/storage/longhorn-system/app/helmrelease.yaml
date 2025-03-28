@@ -53,7 +53,7 @@ spec:
       app:
         className: internal
         hosts:
-          - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
+          - host: "longhorn.${SECRET_DOMAIN}"
             paths:
               - path: /
                 backend:
