@@ -53,7 +53,7 @@ spec:
       enabled: true
       ingressClassName: internal
       host: longhorn.alexieff.io
-      tls: true
+      tls: false
     metrics:
       serviceMonitor:
         enabled: true
