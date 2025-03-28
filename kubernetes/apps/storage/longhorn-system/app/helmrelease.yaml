@@ -50,10 +50,15 @@ spec:
       storageMinimalAvailablePercentage: 1
       storageReservedPercentageForDefaultDisk: 10
     ingress:
-      enabled: true
-      ingressClassName: internal
-      host: longhorn.alexieff.io
-      tls: false
+      app:
+        className: internal
+        hosts:
+          - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                service:
+                  identifier: app
+                  port: http
     metrics:
       serviceMonitor:
         enabled: true
