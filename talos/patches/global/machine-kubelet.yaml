@@ -5,3 +5,7 @@ machine:
     nodeIP:
       validSubnets:
         - 10.69.0.0/24
+#  disks:
+#    - device: /dev/nvme0n1 # The name of the disk to use.
+#      partitions:
+#        - mountpoint: /var/lib/longhorn # Where to mount the partition.
