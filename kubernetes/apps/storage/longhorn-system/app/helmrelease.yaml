@@ -49,16 +49,6 @@ spec:
       replicaAutoBalance: true
       storageMinimalAvailablePercentage: 1
       storageReservedPercentageForDefaultDisk: 10
-    ingress:
-      app:
-        className: internal
-        hosts:
-          - host: "longhorn.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                backend:
-                  port:
-                    number: 80
     metrics:
       serviceMonitor:
         enabled: true

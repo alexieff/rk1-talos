@@ -12,6 +12,6 @@ spec:
           - path: /
             backend:
               service:
-                name: longhorn-ui
+                name: longhorn-frontend
                 port:
                   number: 8000
