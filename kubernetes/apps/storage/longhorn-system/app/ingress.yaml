@@ -1,0 +1,17 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: longhorn-ui
+spec:
+  ingressClassName: internal
+  rules:
+    - host: "longhorn.${SECRET_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: longhorn-backend
+                port:
+                  number: 80
