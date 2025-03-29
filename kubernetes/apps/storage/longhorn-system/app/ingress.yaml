@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: internal
   rules:
-    - host: "longhorn.${SECRET_DOMAIN}"
+    - host: "longhorn.alexieff.io"
       http:
         paths:
           - path: /
